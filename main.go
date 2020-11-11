@@ -8,7 +8,9 @@ import (
 	"runtime/trace"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/go-inovation/ino"
+
+	// ga "github.com/hajimehoshi/go-inovation/ino"
+	ga "github.com/hajimehoshi/go-inovation/life"
 )
 
 var (
@@ -31,7 +33,7 @@ func main() {
 		defer trace.Stop()
 	}
 
-	game, err := ino.NewGame()
+	game, err := ga.NewGame()
 	if err != nil {
 		panic(err)
 	}
@@ -43,8 +45,8 @@ func main() {
 	}
 
 	const scale = 2
-	ebiten.SetWindowSize(ino.ScreenWidth * scale, ino.ScreenHeight * scale)
-	ebiten.SetWindowTitle(ino.Title)
+	ebiten.SetWindowSize(ga.ScreenWidth*scale, ga.ScreenHeight*scale)
+	ebiten.SetWindowTitle(ga.Title)
 	if err := ebiten.RunGame(game); err != nil {
 		panic(err)
 	}
