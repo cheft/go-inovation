@@ -3,8 +3,9 @@ package mobile
 import (
 	"github.com/hajimehoshi/ebiten/v2/mobile"
 
-	"github.com/hajimehoshi/go-inovation/ino"
+	"go-inovation/ino"
 )
+
 func init() {
 	inogame, err := ino.NewGame()
 	if err != nil {

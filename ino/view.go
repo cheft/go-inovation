@@ -1,8 +1,8 @@
 package ino
 
 import (
-	"github.com/hajimehoshi/go-inovation/ino/internal/draw"
-	"github.com/hajimehoshi/go-inovation/ino/internal/input"
+	"go-inovation/ino/internal/draw"
+	"go-inovation/ino/internal/input"
 )
 
 type PositionF struct {

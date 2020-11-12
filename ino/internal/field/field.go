@@ -5,8 +5,8 @@ import (
 
 	"github.com/hajimehoshi/ebiten/v2"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/draw"
-	"github.com/hajimehoshi/go-inovation/ino/internal/fieldtype"
+	"go-inovation/ino/internal/draw"
+	"go-inovation/ino/internal/fieldtype"
 )
 
 const (

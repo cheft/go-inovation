@@ -6,9 +6,10 @@ import (
 )
 
 const (
-	Title        = "life"
-	ScreenWidth  = 320
-	ScreenHeight = 240
+	ScreenWidth  = 960
+	ScreenHeight = 540
+	ScreenScale  = 1
+	Title        = "精彩人生"
 )
 
 func init() {
@@ -31,7 +32,9 @@ func (g *Game) Update() error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
-	ebitenutil.DebugPrint(screen, "Hello, World!")
+	ebitenutil.DebugPrint(screen, "1234567890abcdwert")
+	Text(screen, "中文支持1234567890abcdwert", 0, 40)
+	TextByBotw(screen, "中文支持1234567890abcdwert", 0, 70)
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {

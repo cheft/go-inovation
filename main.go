@@ -9,8 +9,8 @@ import (
 
 	"github.com/hajimehoshi/ebiten/v2"
 
-	// ga "github.com/hajimehoshi/go-inovation/ino"
-	ga "github.com/hajimehoshi/go-inovation/life"
+	// ga "go-inovation/ino"
+	ga "go-inovation/life"
 )
 
 var (
@@ -44,7 +44,7 @@ func main() {
 		game.SetTransparent()
 	}
 
-	const scale = 2
+	const scale = ga.ScreenScale
 	ebiten.SetWindowSize(ga.ScreenWidth*scale, ga.ScreenHeight*scale)
 	ebiten.SetWindowTitle(ga.Title)
 	if err := ebiten.RunGame(game); err != nil {

@@ -9,7 +9,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/audio/vorbis"
 	"github.com/hajimehoshi/ebiten/v2/audio/wav"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/assets"
+	"go-inovation/ino/internal/assets"
 )
 
 const sampleRate = 44100

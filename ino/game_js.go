@@ -7,8 +7,9 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 	"golang.org/x/text/language"
 
+	"go-inovation/ino/internal/text"
+
 	"github.com/hajimehoshi/ebiten/v2/inpututil"
-	"github.com/hajimehoshi/go-inovation/ino/internal/text"
 )
 
 func tryLoseContext() bool {

@@ -10,15 +10,16 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 	"golang.org/x/text/language"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/assets"
-	"github.com/hajimehoshi/go-inovation/ino/internal/fieldtype"
-	"github.com/hajimehoshi/go-inovation/ino/internal/font"
-	"github.com/hajimehoshi/go-inovation/ino/internal/input"
+	"go-inovation/ino/internal/assets"
+	"go-inovation/ino/internal/fieldtype"
+	"go-inovation/ino/internal/font"
+	"go-inovation/ino/internal/input"
 )
 
 const (
 	ScreenWidth  = 320
 	ScreenHeight = 240
+	ScreenScale  = 2
 )
 
 var (

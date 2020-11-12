@@ -11,16 +11,17 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 	"golang.org/x/text/language"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/audio"
-	"github.com/hajimehoshi/go-inovation/ino/internal/draw"
-	"github.com/hajimehoshi/go-inovation/ino/internal/font"
-	"github.com/hajimehoshi/go-inovation/ino/internal/input"
-	"github.com/hajimehoshi/go-inovation/ino/internal/text"
+	"go-inovation/ino/internal/audio"
+	"go-inovation/ino/internal/draw"
+	"go-inovation/ino/internal/font"
+	"go-inovation/ino/internal/input"
+	"go-inovation/ino/internal/text"
 )
 
 const (
 	ScreenWidth  = draw.ScreenWidth
 	ScreenHeight = draw.ScreenHeight
+	ScreenScale  = draw.ScreenScale
 	Title        = "INNO VATION 2007 (Go version)"
 )
 

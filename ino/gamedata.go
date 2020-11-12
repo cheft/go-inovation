@@ -1,7 +1,7 @@
 package ino
 
 import (
-	"github.com/hajimehoshi/go-inovation/ino/internal/fieldtype"
+	"go-inovation/ino/internal/fieldtype"
 )
 
 type GameMode int

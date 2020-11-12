@@ -3,7 +3,7 @@ package fieldtype
 import (
 	"golang.org/x/text/language"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/text"
+	"go-inovation/ino/internal/text"
 )
 
 type FieldType int

@@ -5,11 +5,11 @@ import (
 
 	"github.com/hajimehoshi/ebiten/v2"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/audio"
-	"github.com/hajimehoshi/go-inovation/ino/internal/draw"
-	"github.com/hajimehoshi/go-inovation/ino/internal/field"
-	"github.com/hajimehoshi/go-inovation/ino/internal/fieldtype"
-	"github.com/hajimehoshi/go-inovation/ino/internal/input"
+	"go-inovation/ino/internal/audio"
+	"go-inovation/ino/internal/draw"
+	"go-inovation/ino/internal/field"
+	"go-inovation/ino/internal/fieldtype"
+	"go-inovation/ino/internal/input"
 )
 
 type PlayerState int

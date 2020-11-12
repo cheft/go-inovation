@@ -11,9 +11,9 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 	"golang.org/x/text/language"
 
-	"github.com/hajimehoshi/go-inovation/ino/internal/audio"
-	"github.com/hajimehoshi/go-inovation/ino/internal/draw"
-	"github.com/hajimehoshi/go-inovation/ino/internal/input"
+	"go-inovation/ino/internal/audio"
+	"go-inovation/ino/internal/draw"
+	"go-inovation/ino/internal/input"
 )
 
 type Game struct {
