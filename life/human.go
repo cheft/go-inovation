@@ -9,12 +9,8 @@ import (
 )
 
 const (
-	frameOX     = 0
-	frameOY     = 0
 	frameWidth  = 32
 	frameHeight = 48
-	frameNum    = 3
-	speed       = 2
 )
 
 var (
@@ -22,42 +18,58 @@ var (
 )
 
 type Sprite struct {
-	count  int
-	x      float64
-	y      float64
-	isMove bool
+	count    int
+	x        float64
+	y        float64
+	isMove   bool
+	speed    float64
+	frameNum int
+	frameOX  int
+	frameOY  int
 }
 
 func NewSprite() *Sprite {
-	// img, _, _ := image.Decode(bytes.NewReader(images.Runner_png))
-	// spriteImage = ebiten.NewImageFromImage(img)
 	spriteImage, _, _ = ebitenutil.NewImageFromFile("life/assets/img/human1.png")
-	return &Sprite{count: 0, x: 100, y: 100, isMove: false}
+	return &Sprite{
+		count:    0,
+		x:        100,
+		y:        100,
+		isMove:   false,
+		speed:    2,
+		frameNum: 3,
+		frameOX:  96, // 人物切换
+		frameOY:  0,
+	}
 }
 
 func (s *Sprite) Update() error {
 	s.count++
+	s.isMove = true
+	s.frameNum = 3
 	if ebiten.IsKeyPressed(ebiten.KeyA) {
-		s.x -= speed
+		s.x -= s.speed
+		s.frameOY = 48
 	} else if ebiten.IsKeyPressed(ebiten.KeyD) {
-		s.x += speed
+		s.x += s.speed
+		s.frameOY = 96
 	} else if ebiten.IsKeyPressed(ebiten.KeyW) {
-		s.y -= speed
+		s.y -= s.speed
+		s.frameOY = 144
 	} else if ebiten.IsKeyPressed(ebiten.KeyS) {
-		s.y += speed
+		s.y += s.speed
+		s.frameOY = 0
 	} else {
-
+		s.isMove = false
+		s.frameNum = 1
+		s.count = 0
 	}
 	return nil
 }
 
 func (s *Sprite) Draw(screen *ebiten.Image) {
 	op := &ebiten.DrawImageOptions{}
-	// 居中
-	// op.GeoM.Translate(ScreenWidth/2, ScreenHeight/2)
-	// op.GeoM.Translate(-float64(frameWidth)/2, -float64(frameHeight)/2)
 	op.GeoM.Translate(s.x, s.y)
-	i := (s.count / 10) % frameNum
-	sx, sy := frameOX+i*frameWidth, frameOY
+	i := (s.count / 10) % s.frameNum
+	sx, sy := s.frameOX+i*frameWidth, s.frameOY
 	screen.DrawImage(spriteImage.SubImage(image.Rect(sx, sy, sx+frameWidth, sy+frameHeight)).(*ebiten.Image), op)
 }
