@@ -6,6 +6,7 @@ import (
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
+	"github.com/hajimehoshi/ebiten/v2/inpututil"
 )
 
 const (
@@ -58,6 +59,18 @@ func (s *Sprite) Update() error {
 	} else if ebiten.IsKeyPressed(ebiten.KeyS) {
 		s.y += s.speed
 		s.frameOY = 0
+	} else if inpututil.IsKeyJustPressed(ebiten.KeyLeft) {
+		if s.frameOX <= 0 {
+			s.frameOX = 288
+		} else {
+			s.frameOX -= 96
+		}
+	} else if inpututil.IsKeyJustPressed(ebiten.KeyRight) {
+		if s.frameOX >= 288 {
+			s.frameOX = 0
+		} else {
+			s.frameOX += 96
+		}
 	} else {
 		s.isMove = false
 		s.frameNum = 1
