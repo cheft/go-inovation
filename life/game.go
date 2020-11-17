@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	ScreenWidth  = 240
-	ScreenHeight = 240
-	ScreenScale  = 2
+	ScreenWidth  = 2560
+	ScreenHeight = 1920
+	ScreenScale  = 0.3
 	Title        = "独立人生"
 )
 
